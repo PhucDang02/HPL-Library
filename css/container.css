@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tittle1 {
+    width: 100%;
+    height: 45px;
+    /**background-color: rgb(151, 219, 130);**/
+    text-align: center;
+    cursor: default;
+}
+.tittle1 a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(34, 34, 34);
+}
+.tittle1 a:hover{
+  color: rgb(151, 219, 130);
+  font-size: 32px;
+}
+/**San pham**/
+.product1 {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.col1 {
+  width: 22%;
+  height: 300px;
+  border: 1.5px solid rgb(212, 211, 211);
+}
+.col1 img {
+  width: 100%;
+  height: 190px;
+}
+.col1:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: default;
+  transform: translate(0, -7px);
+}
+/**HOT**/
+.main_img_top{
+  display: inline;
+  position: absolute;
+  z-index: 1;
+}
+.main_img_top p{
+  color: white;
+  position: absolute;
+  z-index: 2;
+  margin-top: 8px;
+  margin-left:20px;
+  font-size: 15px;
+}
+.round {
+  width: 70px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+  /**border-radius: 0 5px 5px 0;**/
+}
+
+.name {
+  font-size: 20px;
+  padding-left: 9px;
+  padding-top: 5px;
+}
+.name a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+.name a:hover{
+  color: rgb(151, 219, 130);
+  cursor: pointer;
+}
+.Loca {
+  font-size: 14px;
+  color: gray;
+  padding-left: 9px;
+  padding-top: 3px;
+}
+.price_buy {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4.5%;
+}
+.price {
+  color: indianred;
+  font-size: 17px;
+}
+.buy {
+  color: gray;
+}
+

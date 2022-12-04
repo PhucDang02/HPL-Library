@@ -1,0 +1,191 @@
+.riviu_bg {
+  width: 81%;
+  font-weight: 700;
+  background-image: url('../img/Riviu_img/riuviu_bg.png');
+  background-size: 100%;
+  height: 400px;
+  float: right;
+  padding-top: 15%;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+.riviu {
+width: 64.5%;
+margin-left: 17.5%;
+margin-top: 34%;
+/*border: 1px solid red;*/
+font-family: Arial, Helvetica, sans-serif;
+}
+.riviu_menu {
+width: 100%;
+height: 40px;
+/*border: 1px solid blue;*/
+padding-top: 1.5%;
+}
+.riviu_menu ul {
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: space-between;
+}
+.riviu_menu li {
+display: inline;
+justify-content: space-between;
+font-size: 18px;
+}
+.riviu_menu a {
+list-style-type: none;
+text-decoration: none;
+color: black;
+padding: 10px 10px;
+}
+.riviu_menu li a:hover {
+color: white; 
+background-color:rgb(151, 219, 130) ;
+}
+
+/*Post-----------------------------*/
+.riviu_container {
+width: 100%;
+margin-top: 10px;
+}
+
+.riviu_container_post {
+width: 100%;
+height: 750px;
+/*border: 1px solid steelblue;*/
+padding: 5px;
+background-color:rgb(248, 248, 248);
+border-radius: 2%;
+margin-bottom: 15px;
+}
+
+.riviu_container_head {
+  width: 100%;
+  height: 50px;
+  /*border: 1px solid palevioletred;*/
+  display: flex;
+  justify-content: space-between;
+}
+.riviu_container_head_left{
+  width: 40%;
+  height: 50px;
+  display: flex;
+}
+.riviu_container_head_avt img{
+width: 100%;
+height: 100%;
+border-radius: 50%;
+}
+.riviu_container_head_name{
+margin-left: 2%;
+margin-top: 3%;
+font-size: 12px;
+color: grey;
+}
+.riviu_container_head_name b{
+color: black;
+font-size: 18px;
+}
+.riviu_container_head_right {
+  width: 10%;
+  height: 50px;
+  color:grey;
+  font-size: 20px;
+  text-align: right;
+  padding-top: 2%;
+  padding-right: 1%;
+}
+
+.riviu_container_content{
+  width: 100%;
+  height: 200px;
+  /*border: 1px solid rgb(49, 82, 1);*/
+  padding-left: 1%;
+}
+.riviu_container_content p{
+font-size: 15px;
+line-height: 1.5;
+}
+.riviu_container_content i {
+color: rgb(11, 138, 49);
+}
+
+
+.riviu_container_img {
+  width: 100%;
+  height: 400px;
+  margin: 5px 0;
+}
+.riviu_container_img img{
+width: 100%;
+height: 100%;
+}
+
+
+.riviu_container_react{
+  width: 100%;
+  height: 20px;
+  /*border: 1px solid rgb(1, 215, 223);*/
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.riviu_container_react_icon{
+  width: 40%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.riviu_container_react_icon img{
+width: 17%;
+}
+.riviu_container_react_cmt{
+  width: 40%;
+  height: 20px;
+  font-size: 15px;
+  text-align: right;
+}
+
+.riviu_container_react_2{
+  width: 100%;
+  height: 30px;
+  /*border: 1px solid rgb(0, 0, 0);*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.riviu_container_react_2 div:hover{
+cursor: pointer;
+color: grey;
+}
+
+
+.riviu_more{
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: grey;
+}
+.riviu_more:hover{
+   color: rgb(151, 219, 130);
+   cursor: pointer;
+}
+/*form*/
+.riviu_form{
+  width: 100%;
+  margin-bottom: 30px;
+}
+.riviu_form input{
+  width: 100%;
+  height: 80px;
+  font-size: 15px;
+  padding-bottom: 35px;
+}

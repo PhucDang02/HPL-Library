@@ -1,0 +1,280 @@
+*{
+    box-sizing: border-box;
+}
+
+.app-item {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-item{
+    position: relative;
+    display: flex;   
+    margin: auto;
+}
+
+.app-item .item-img {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.app-item .item-img div {
+    text-align: center;
+}
+
+.app-item img {
+    width: 100%;
+    height: 357px; 
+    cursor: pointer; 
+    justify-content: center;
+}
+
+.app-item .item-content {
+    width: 50%;
+    height: 100%;   
+    margin: 10px;
+    border-radius: 10px;
+    position: relative; 
+    padding-left: 4%;
+    margin-top: 15px;
+}
+
+
+.app-item .item-content .item-name {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.app-item .item-content .address {
+    color: gray;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.app-item .item-content .star-rate div{
+    display: inline-block;
+    color: rgb(252, 195, 10);
+    font-size: 18px;
+}
+
+.app-item .item-content .star-rate span {
+    background-color: rgb(252, 195, 10);
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.app-item .item-content .time-on div {
+    display: inline-block;
+}
+
+.app-item .item-content .time-on .open{
+    color: rgb(18, 158, 18); 
+    font-size: 17px;
+}
+
+.app-item .item-content .time-on .time-open {
+    padding-left: 10px;
+    font-size: 17px;
+}
+.app-item .item-content .time-on .time-open i{
+    color: grey;
+}
+
+.app-item .item-content .item-price div{
+    display: inline-flex;
+}
+
+.app-item .item-content .item-price p {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.app-item .item-content .item-price {
+    color:rgb(219, 16, 16);
+    font-size: 18px;   
+}
+
+.item-price #price-icon {
+    color: rgb(252, 195, 10);
+}
+.app-item .item-content .time-on .open i {
+    font-size: 9px;
+}
+
+.app-item .item-content .fee-service div {
+    display: inline-block;
+}
+
+.app-item .item-content .star-rate,.time-on,.item-price {
+    margin-top: 20px;
+}
+
+.app-item .item-content .fee-service .sv-red {
+    color:rgb(219, 16, 16);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.app-item .item-content .fee-service .sv-size {
+    font-size: 17px;
+    color: rgb(97, 91, 91);
+    margin-top: 10px;
+}
+
+
+.main-item .item-pay {
+    position: absolute;
+    left: 54%;
+    top: 80%;
+    background-color: rgb(233, 38, 38);
+    color: white;
+    border: 1px solid red;
+    cursor: pointer;
+    padding: 10px 18px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+.app-item input:hover{
+    background-color: rgb(192, 21, 21);
+}
+
+
+/* sup-item */
+
+.sup-item {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.sup-item .item-bef {
+    border: dotted 1px black;
+    width: 49%;
+    height: 100%;
+    background-color: rgb(255, 249, 217);
+    margin-top: 10px;
+    position: relative;
+}
+
+.sup-item .item-bef .bef {
+    font-size: 14px;
+    margin: 15px 0 15px 40px;
+    line-height: 100%; 
+}
+
+.sup-item .item-bef .bef div{
+    display: inline; 
+}
+
+.sup-item .item-bef .bef .motor-icon {
+    color:darkcyan;
+    font-size: 20px;
+    padding-right: 3px;
+}
+
+.sup-item .item-bef .bef .code-icon {
+    color:rgb(223, 20, 20);
+    font-size: 20px;
+    padding-right: 3px;
+}
+
+/*Đặt theo nhóm*/
+.sup-item .item-order {
+    border: solid 1px rgb(196, 193, 193);
+    width: 46%;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 3px;
+    position: relative;   
+    left: 5%;
+}
+
+.sup-item .item-order .order-top {
+    text-align: right;    
+}
+
+.sup-item .item-order .order-top div{
+    display: inline-block;
+    padding: 7px;
+}
+
+.sup-item .item-order .order-top .remove {
+    border: solid 1px red;
+    background-color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    color: red;
+    font-size: 12px;
+}
+
+.sup-item .item-order .order-top .remove:hover {
+    background-color: red;
+    color: white;
+}
+
+.sup-item .item-order .order-top .order {
+    background-color: rgb(115, 115, 212);
+    border: 1px solid rgb(115, 115, 212);   
+    color: whitesmoke;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.sup-item .item-order .order-top .order:hover{
+    background-color: rgb(146, 146, 204)
+}
+
+
+.sup-item .item-order .order-bot .note {
+    font-size: 14px;
+    font-style: italic;
+    margin: 5px 0;
+    padding-left: 10px;
+}
+
+.sup-item .item-order .order-bot #plus,#max {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(233, 230, 230);
+    padding: 5px 5px 5px 10px;
+    font-size: 12px;
+}
+
+#item-max {
+    color: dodgerblue;
+}
+
+.sup-item .item-order .order-bot .coupon {
+    text-align: center;
+    font-size: 14px;
+    background-color: blanchedalmond;
+    padding: 5px;
+}
+
+.sup-item .item-order .btn-order{
+    text-align: center;
+    padding: 10px 0;
+    height: 100%;
+    width: 100%;
+}
+
+.sup-item .item-order .btn-order .order-first {
+    padding: 10px 70px;
+    background-color: rgb(236, 51, 51);
+    color: white;
+    border: 1px solid red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.sup-item .item-order .btn-order .order-first:hover {
+    background-color: rgb(180, 21, 21);
+}
+

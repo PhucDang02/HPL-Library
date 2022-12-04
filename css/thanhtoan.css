@@ -1,0 +1,77 @@
+.thanhtoan_main{
+    margin: 30px 0 85px 0;
+}
+.thanhtoan {
+    width: 60%;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.thanhtoan h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.agree {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.agree button {
+    background-color: rgb(233, 23, 23);
+    border: 1px solid red;
+    padding: 10px 30px;
+    color: white;
+    font-size: 18px;
+}
+
+.agree button:hover {
+    background-color: rgb(175, 10, 10);
+    cursor: pointer;
+}
+
+.thanhtoan table,td,tr{
+    border: 0.5px solid gainsboro;
+    border-collapse: collapse;
+}
+
+.thanhtoan table {
+    width: 90%;
+    margin: auto;
+    text-align: center; 
+    border: 1px solid black;
+    background-color: white;
+}
+
+.thanhtoan td,tr,th {
+    border: 0.25px solid black;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.thanhtoan img {
+    height: 150px;
+    width: 250px;
+}
+
+.thanhtoan .tt {
+    font-weight: bold;
+    color: black;
+    padding: 7px;
+}
+
+/*button xóa*/
+.thanhtoan button {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.thanhtoan button:hover {
+    background-color: rgb(247, 12, 12);
+    border: 1px solid rgb(247, 12, 12);
+    color: white;
+    cursor: pointer;
+}
+

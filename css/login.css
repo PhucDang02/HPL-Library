@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    background-color:white;
+    border: 1px solid #ccc;
+    padding-top: 5px;
+}
+.header img{
+    width: 270px;
+    height: 60px;
+    margin-left: 39%;
+
+}
+.container form{
+    width: 450px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.content{
+    margin: 30px 20px 15px;
+}
+.box_container{
+    border: 0.5px solid #ccc;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+}
+.container .box_container h1{
+    text-align: center;
+    margin-top: 15px;
+}
+.input_group{
+    margin-bottom: 30px;
+}
+.input_group p{
+    margin-bottom: 8px;
+}
+.input_group .icon_input{
+    position: relative;
+}
+.icon_input .icon_sub{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 15px;
+}
+.icon_input .icon_sub i{
+    line-height: 35px;
+}
+.icon_input input{
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+
+.container .content input{
+    width: 100%;
+    height: 35px;
+    padding-left: 35px;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+}
+.content .input_group p{
+    font-size: 17px;
+}
+
+
+#checkbox_memory{
+    height: 16px;
+    display: inline-block;
+    width: 35px;
+}
+.save_pass{
+    font-size: 14px;
+}
+.sub_input{
+    display: flex;
+    justify-content:space-between;
+    font-size: 14px;
+}
+.sub_input a{
+    margin-top: 4px;
+}
+
+
+.login_input{
+    width: 100%;
+    height: 35px;
+    margin: 15px 0;
+    background-color: #F7941D;
+    border: 0.5px solid #ccc;
+    font-size: 17px;
+}
+.login_input a{
+    text-decoration: none;
+    color: white;
+}
+.login_input:hover{
+    /* background-image: linear-gradient(0,rgb(150,205,134),rgb(96,188,100)); */
+    background-color: #545AA6;
+    color: white;
+    cursor: pointer;
+}
+.span_dk{
+    margin-left: 27%;
+    font-size: 14px;
+}
+.span_dk a{
+    font-size: 14px;
+    color: blue;
+}
+
+.footer hr{
+    margin: 0 15px 20px 15px;
+}
+.footer h2 {
+    margin-bottom: 15px;
+}

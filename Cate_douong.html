@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gen Z</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="stylesheet" href="./css/menu_banner.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/giohang.css">
+  <link rel="stylesheet" href="./css/Category.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- block element modifier -->
+  <div id="app">
+    <header class="header">
+      <div class="grid">
+        <nav class="header-navbar">
+          <ul class="header_navbar-list">
+            <li class="header_navbar-item header_navbar-item--separate">
+              <i class="header__navbar-icon fas fa-phone-volume"></i> 0343483518
+            </li>
+            <li class="header_navbar-item header_navbar-item--separate">
+              <i class="header__navbar-icon fas fa-clock"></i> 07:00 - 22:00
+            </li>
+            <li class="header_navbar-item">
+              <span class="header_navbar--title-no-pointer">Connect</span>
+              <a href="" class="header_navbar-icon-link"><i class="header__navbar-icon fab fa-facebook"></i></a>
+              <a href="" class="header_navbar-icon-link"><i class="header__navbar-icon fab fa-instagram"></i></a>
+            </li>
+          </ul>
+          <ul class="header_navbar-list">
+            <li class="header_navbar-item header_navbar-item header_navbar-item-has-notify">
+              <a href="" class="header_navbar-item-link">
+                <i class="header__navbar-icon fas fa-bell"></i> Thông báo
+              </a>
+              <div class="header__notify">
+                <div class="container-notify-header">
+                  <div class="notify-header-img"><img src="./img/notify_user_info.png" alt=""></div>
+                  <div class="notify-header-paragraph">
+                    <p>Đăng nhập để xem thông báo</p>
+                  </div>
+                </div>
+
+                <div class="notify-footer">
+                  <ul>
+                    <li><a href="./login.html">Đăng nhập</a></li>
+                    <li><a href="./signup.html">Đăng ký</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="header_navbar-item">
+              <a href="" class="header_navbar-item-link"></a>
+              <i class="header__navbar-icon fas fa-question-circle"></i> Trợ giúp
+              </a>
+            </li>
+            <li class="header_navbar-item header_navbar-item-header_navbar-item--separate"> <a id="valueusername" href="./login.html">Đăng nhập</a></li>
+            <li class="header_navbar-item header_navbar-item--strong"> <a onclick="Output()" id="logout" href="./signup.html">Đăng ký</a></li>
+          </ul>
+        </nav>
+        <!-- header--with--search -->
+        <div class="header-with-search">
+          <div class="header__logo">
+            <div class="header-logo-img">
+              <a href="./home.html"><img src="./img/logo_header.png" alt="logo team UwU"></a>
+              <!-- <svg height="56" width="200">
+                  <text x="55" y="47" fill="white">Gen Z</text>
+                </svg> -->
+            </div>
+          </div>
+
+          <div class="header__search">
+            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+            <!-- list search -->
+            <div class="header__search-list">
+              <ul>
+                <li>
+                  <a href="#">Cơm gà</a>
+                </li>
+                <li>
+                  <a href="#">Lẩu thái</a>
+                </li>
+                <li>
+                  <a href="#">Lẩu chay</a>
+                </li>
+                <li>
+                  <a href="#">Trà sữa truyền thống</a>
+                </li>
+              </ul>
+            </div>
+                               
+            <div class="header__search-selection">
+              <span class="header__search-selection-label" id="kq_address">Địa điểm</span>
+              <i class="header__search-selection-icon fas fa-sort-down"></i>
+              <ul class="sub_address">
+                <li><a href="#" onclick="Address1()">Hà Nội</a></li>
+                <li><a href="#"  onclick="Address2()">TP.HCM</a></li>
+                <li><a href="#" onclick="Address3()">Đà Nẵng</a></li>
+                <li><a href="#" onclick="Address4()">Tiền Giang</a></li>
+                <li><a href="#" onclick="Address5()">TP.Cần Thơ</a></li>
+                <li><a href="#">Khác...</a></li>
+              </ul>
+            </div>
+            <button class="header__search-btn">
+              <i class="header__search-btn-icon fas fa-search"></i>
+            </button>
+          </div>
+
+          <div class="header__cark">
+            <i class="header__cark-icon fas fa-cart-plus" onclick="showcart()"  ></i>
+            <b id="countsp">0</b>
+          </div>
+          <div class="showcart" id="showcart">
+            <table>
+              <tr>
+                <td>STT</td>
+              <td>Hình</td>
+              <td>Tên sản phẩm</td>
+              <td>Giá</td>
+              <td>Thành tiền</td>
+              <td>Xóa</td>
+            </tr>
+              <tbody id="mycart">
+
+              </tbody>
+              
+            </table>
+            <br>
+            <button onclick="location.href='./thanhtoan.html'">Thanh toán</a></button>
+            <button id="xoatatca" onclick="xoatatca()">Xóa tất cả</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Menu ngang-->
+    <div class="Menu-top">
+      <ul class="nav-menu">
+        <li><a href="./home.html">Trang chủ</a></li>
+        <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+        <li><a href="./Riviu.html">Đánh giá</a></li>
+        <li><a href="./banchay.html">Bán chạy</a></li>
+        <li><a href="./yeuthich.html">Yêu thích</a></li>
+        <li><a href="./thanhtoan.html">Đơn hàng</a></li>
+      </ul>
+    </div>
+</div>  
+
+<!--Menu + Banner-------------------------------------------------->
+<div class="menu">
+    <!--Menu trái--------------------------------->
+      <div class="menuL">
+        <h2> &#9776 DANH MỤC</h2>
+        <div class="menuleft">
+          <ul>
+            <li><a href="./Cate_doan.html">Đồ ăn</a></li>
+            <li><a href="./Cate_dochay.html">Đồ chay</a></i></li>
+            <li><a href="./Cate_douong.html">Đồ uống</a></i></li>
+            <li><a href="./Cate_trangmieng.html">Tráng miệng</a></i></li>
+            <li><a href="./Cate_thucpham.html">Thực phẩm</a></i></li>
+            <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+            <li><a href="./Riviu.html">Đánh giá</a></i></li>
+            <li><a href="./banchay.html">Bán chạy</a></i></li>
+            <li><a href="./yeuthich.html">Yêu thích</a></i></li>
+          </ul>
+        </div>
+      </div>
+
+    <!--Banner------------------------------------------------------->
+      <div class="banner_page">
+        <div class="category_tittle">
+          <h2>ĐỒ UỐNG</h2>
+          <p>Ngon nhất châu Âu - Tính tiền châu Á</p>
+        </div>
+        <img src="./img/CateDouong/background3.png">
+      </div>
+</div>
+
+<!--Categoryyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy-->
+<div class="category">
+  <div class="category_container">
+      <div class="cate_empty"><p></p></div>
+      <!--Row 1-->
+      <div data-aos="fade-up" data-aos-duration="2000" class="cate_product">
+       <!--4 cột-->
+        <div class="cate_col">
+          <div class="cate_img">
+            <a href="./Product/Douong1.html"><img src="./img/CateDouong/cafe.jpg" alt=""></a>
+          </div>
+  
+          <div class="cate_name">
+            <a href="./Product/Douong1.html">Phin Phúc Long</a>
+          </div>
+  
+          <div class="cate_loca">
+            350 Lê Văn Sỹ, q3 
+          </div>
+  
+          <div class="cate_price_buy">
+            <div class="cate_price">
+            đ65.000
+            </div>
+  
+            <div class="cate_buy">
+            Đã bán 555
+            </div>
+          </div>
+        </div>
+
+        <div class="cate_col">
+          <div class="cate_img">
+            <a href="./Product/Douong2.html"><img src="./img/CateDouong/tradao.jpg" alt=""></a>
+          </div>
+  
+          <div class="cate_name">
+            <a href="./Product/Douong2.html">Trà đào camxamita</a>
+          </div>
+  
+          <div class="cate_loca">
+             820 Sư Vạn Hạn, q10
+          </div>
+  
+          <div class="cate_price_buy">
+            <div class="cate_price">
+            đ22.000
+            </div>
+  
+            <div class="cate_buy">
+            Đã bán 1k+
+            </div>
+          </div>
+        </div>
+
+        <div class="cate_col">
+          <div class="cate_img">
+            <a href="./Product/Douong3.html"><img src="./img/CateDouong/tratraicay.jpg" alt=""></a>
+          </div>
+  
+          <div class="cate_name">
+            <a href=".Product/Douong3.html">Trà trái cây</a>
+          </div>
+  
+          <div class="cate_loca">
+            72 Âu Cơ, q.Tân Phú
+          </div>
+  
+          <div class="cate_price_buy">
+            <div class="cate_price">
+            đ25.000
+            </div>
+  
+            <div class="cate_buy">
+            Đã bán 490
+            </div>
+          </div>
+        </div>
+
+        <div class="cate_col">
+          <div class="cate_img">
+            <a href="./Product/Douong4.html"><img src="./img/CateDouong/travai.jpg" alt=""></a>
+          </div>
+  
+          <div class="cate_name">
+            <a href="./Product/Douong4.html">Trà vải Phúc Long</a>
+          </div>
+          <div class="cate_loca">
+            117 Nguyễn Đình chiểu 
+          </div>
+  
+          <div class="cate_price_buy">
+            <div class="cate_price">
+            đ55.000
+            </div>
+  
+            <div class="cate_buy">
+            Đã bán 999
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <!--Row 2-->
+      <div data-aos="fade-up" data-aos-duration="2000" class="cate_product">
+        <!--4 cột-->
+         <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/hongtrasua.png" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Hồng trà sữa</a>
+           </div>
+   
+           <div class="cate_loca">
+              138 Nam Kỳ Khởi Nghĩa
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+             đ30.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 419
+             </div>
+           </div>
+         </div>
+ 
+         <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/sinhtobo.jpg" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Sinh tố bơ</a>
+           </div>
+   
+           <div class="cate_loca">
+             1067 Bình Quới, q.Bình Thạnh
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+             đ22.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 579
+             </div>
+           </div>
+         </div>
+ 
+         <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/soda.jpg" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Soda trái cây</a>
+           </div>
+   
+           <div class="cate_loca">
+            436 Nguyễn Thị Thập
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+                đ25.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 1k+
+             </div>
+           </div>
+         </div>
+ 
+          <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/sinhtodao.jpg" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Sinh tố đào</a>
+           </div>
+   
+           <div class="cate_loca">
+             74 Hai Bà Trưng, q1
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+             đ20.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 395
+             </div>
+           </div>
+          </div>
+      </div>  
+      
+      <!--Row 3-->
+      <div data-aos="fade-up" data-aos-duration="2000" class="cate_product">
+        <!--4 cột-->
+         <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/trahoadaubiec.jpg" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Trà hoa đậu biếc</a>
+           </div>
+   
+           <div class="cate_loca">
+             16 Lê Quý Đôn, q3 
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+             đ25.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 287
+             </div>
+           </div>
+         </div>
+ 
+         <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/cam.jpg" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Cam ép</a>
+           </div>
+   
+           <div class="cate_loca">
+             Số 10 Nguyễn Thông, q3
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+             đ20.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 992
+             </div>
+           </div>
+         </div>
+ 
+         <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/suatuoitranchau.jpg" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Sữa tươi TCĐĐ</a>
+           </div>
+   
+           <div class="cate_loca">
+             277 Lý Tự Trọng, q1
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+             đ32.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 610
+             </div>
+           </div>
+         </div>
+ 
+          <div class="cate_col">
+           <div class="cate_img">
+            <a href=""><img src="./img/CateDouong/milo.jpg" alt=""></a>
+           </div>
+   
+           <div class="cate_name">
+             <a href="">Milo đá bào</a>
+           </div>
+   
+           <div class="cate_loca">
+             125 Cộng Hòa, q.Tân Bình
+           </div>
+   
+           <div class="cate_price_buy">
+             <div class="cate_price">
+             đ25.000
+             </div>
+   
+             <div class="cate_buy">
+             Đã bán 800
+             </div>
+           </div>
+          </div>
+      </div>  
+      
+    </div>
+</div>
+
+
+<!--Footer neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
+<div class="footer">
+  <hr/>
+  <div class="footer_footer">
+    <div class="footer1">
+      <h2>Chăm sóc khách hàng</h2>
+      <ul>
+        <li><a href="">Trung Tâm Trợ Giúp</a></li> <br/>
+        <li><a href="">Hướng Dẫn Mua Hàng</a></li><br/>
+        <li><a href="">Hướng Dẫn Bán Hàng</a></li><br/>
+        <li><a href="">Thanh Toán</a></li><br/>
+        <li><a href="">Vận Chuyển</a></li><br/>
+        <li> Chăm Sóc Khách Hàng: <a href="">cskh@genz.vn</a></li><br/>
+        <li>Báo Lỗi Bảo Mật: <a href=""> security@genz.vn</a></li>
+      </ul>
+    </div>
+    <div class="footer2">
+      <h2>GenZ Food</h2>
+      <ul>
+        <li><a href="">Giới Thiệu</a></li> <br/>
+        <li><a href="">Tuyển Dụng</a></li><br/>
+        <li><a href="">Điều Khoản</a></li><br/>
+        <li><a href="">Chính Sách Bảo Mật</a></li><br/>
+        <li><a href="">Chương Trình tiếp Thị</a></li><br/>
+        <li><a href="">Liên Hệ Truyền Thông</a></li>
+      </ul>
+    </div>
+    <div class="footer3">
+      <h2>Ứng dụng GenZ Food</h2>
+      <ul>
+        <li><a href=""><i class="fab fa-facebook"></i> Facebook</a></li> <br/>
+        <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li><br/>
+        <li><a href=""></a><i class="fab fa-twitter"></i> Twitter</a></li><br/>
+        <li><a href=""><i class="fab fa-viber"></i> Viber</li></a>
+      </ul>
+    </div>
+    <div class="footer4">
+      <h2> Địa chỉ Công Ty </h2>
+      <ul>
+        <li><a href=""><b>Địa chỉ: </b>828 Sư Vạn Hạnh, Phường 13,<br/><br/> Quận 10, TP. Hồ Chí Minh</a></li><br/>
+        <li><a href=""> <b>Điện thoại:</b>(+84) 38 632 052</a></li><br/>
+        <li><a href=""><b>Fax:</b>(+84 28) 38 650 991</a></li><br/>
+        <li><a href=""><b>Email:</b>GenZfood@gmail.com</a></li><br/>
+        <img src="./img/logo_footer-01.png" alt="">
+      </ul>
+    </div>
+  </div>
+
+  <!--Copy right-->
+  <div class="coppyright">
+    © Copyright 2021 - Bản quyền thuộc Công Ty TNHH GenZ - GenZ.vn
+    </footer>
+  </div>
+</div>
+
+    <script src="https://kit.fontawesome.com/14e8760cb2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/header.js"></script>
+    <script src="./js/giohang.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

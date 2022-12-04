@@ -1,0 +1,62 @@
+.showcart{
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid rgb(163, 163, 163);
+    box-shadow: 0 0 3px rgba(36, 35, 35, 0.452);
+    animation:notify-header-growth ease-in 0.2s;
+    will-change: opacity, transform;
+    transform-origin: calc(100% - 20px) top;
+    z-index: 4;
+}
+
+.showcart table,td ,tr{
+    border-collapse: collapse;
+    border: 0.5px solid rgb(104, 103, 103); 
+}
+
+
+.showcart td {
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+}
+
+#xoatatca{
+    float: right;
+}
+
+#mycart img {
+    padding-top: 5px;
+    width: 90px;
+    height: 70px;
+}
+
+#countsp {
+    background-color: red;
+    border-radius: 50%;
+    padding: 0px 3px 0px 3px;
+    font-size: 12px;
+    position: relative;
+    right: 2%;
+}
+
+.showcart button {
+    background-color: white;
+    border: 0.5px solid white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.showcart button:hover {
+    background-color: rgb(247, 12, 12);
+    border: 0.5px solid red;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gen Z</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="stylesheet" href="./css/menu_banner.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/giohang.css">
+  <link rel="stylesheet" href="./css/riviu.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- block element modifier -->
+  <div id="app">
+    <header class="header">
+      <div class="grid">
+        <nav class="header-navbar">
+          <ul class="header_navbar-list">
+            <li class="header_navbar-item header_navbar-item--separate">
+              <i class="header__navbar-icon fas fa-phone-volume"></i> 0343483518
+            </li>
+            <li class="header_navbar-item header_navbar-item--separate">
+              <i class="header__navbar-icon fas fa-clock"></i> 07:00 - 22:00
+            </li>
+            <li class="header_navbar-item">
+              <span class="header_navbar--title-no-pointer">Connect</span>
+              <a href="" class="header_navbar-icon-link"><i class="header__navbar-icon fab fa-facebook"></i></a>
+              <a href="" class="header_navbar-icon-link"><i class="header__navbar-icon fab fa-instagram"></i></a>
+            </li>
+          </ul>
+          <ul class="header_navbar-list">
+            <li class="header_navbar-item header_navbar-item header_navbar-item-has-notify">
+              <a href="" class="header_navbar-item-link">
+                <i class="header__navbar-icon fas fa-bell"></i> Thông báo
+              </a>
+              <div class="header__notify">
+                <div class="container-notify-header">
+                  <div class="notify-header-img"><img src="./img/notify_user_info.png" alt=""></div>
+                  <div class="notify-header-paragraph">
+                    <p>Đăng nhập để xem thông báo</p>
+                  </div>
+                </div>
+
+                <div class="notify-footer">
+                  <ul>
+                    <li><a href="./login.html">Đăng nhập</a></li>
+                    <li><a href="./signup.html">Đăng ký</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="header_navbar-item">
+              <a href="" class="header_navbar-item-link"></a>
+              <i class="header__navbar-icon fas fa-question-circle"></i> Trợ giúp
+              </a>
+            </li>
+            <li class="header_navbar-item header_navbar-item-header_navbar-item--separate"> <a id="valueusername" href="./login.html">Đăng nhập</a></li>
+            <li class="header_navbar-item header_navbar-item--strong"> <a onclick="Output()" id="logout" href="./signup.html">Đăng ký</a></li>
+          </ul>
+        </nav>
+        <!-- header--with--search -->
+        <div class="header-with-search">
+          <div class="header__logo">
+            <div class="header-logo-img">
+              <a href="./home.html"><img src="./img/logo_header.png" alt="logo team UwU"></a>
+              <!-- <svg height="56" width="200">
+                  <text x="55" y="47" fill="white">Gen Z</text>
+                </svg> -->
+            </div>
+          </div>
+
+          <div class="header__search">
+            <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm">
+            <!-- list search -->
+            <div class="header__search-list">
+              <ul>
+                <li>
+                  <a href="#">Cơm gà</a>
+                </li>
+                <li>
+                  <a href="#">Lẩu thái</a>
+                </li>
+                <li>
+                  <a href="#">Lẩu chay</a>
+                </li>
+                <li>
+                  <a href="#">Trà sữa truyền thống</a>
+                </li>
+              </ul>
+            </div>
+                               
+            <div class="header__search-selection">
+              <span class="header__search-selection-label" id="kq_address">Địa điểm</span>
+              <i class="header__search-selection-icon fas fa-sort-down"></i>
+              <ul class="sub_address">
+                <li><a href="#" onclick="Address1()">Hà Nội</a></li>
+                <li><a href="#"  onclick="Address2()">TP.HCM</a></li>
+                <li><a href="#" onclick="Address3()">Đà Nẵng</a></li>
+                <li><a href="#" onclick="Address4()">Tiền Giang</a></li>
+                <li><a href="#" onclick="Address5()">TP.Cần Thơ</a></li>
+                <li><a href="#">Khác...</a></li>
+              </ul>
+            </div>
+            <button class="header__search-btn">
+              <i class="header__search-btn-icon fas fa-search"></i>
+            </button>
+          </div>
+
+          <div class="header__cark">
+            <i class="header__cark-icon fas fa-cart-plus" onclick="showcart()"  ></i>
+            <b id="countsp">0</b>
+          </div>
+          <div class="showcart" id="showcart">
+            <table>
+              <tr>
+                <td>STT</td>
+              <td>Hình</td>
+              <td>Tên sản phẩm</td>
+              <td>Giá</td>
+              <td>Thành tiền</td>
+              <td>Xóa</td>
+            </tr>
+              <tbody id="mycart">
+
+              </tbody>
+              
+            </table>
+            <br>
+            <button onclick="location.href='./thanhtoan.html'">Thanh toán</a></button>
+            <button id="xoatatca" onclick="xoatatca()">Xóa tất cả</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Menu ngang-->
+    <div class="Menu-top">
+      <ul class="nav-menu">
+        <li><a href="./home.html">Trang chủ</a></li>
+        <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+        <li><a href="./Riviu.html">Đánh giá</a></li>
+        <li><a href="./banchay.html">Bán chạy</a></li>
+        <li><a href="./yeuthich.html">Yêu thích</a></li>
+        <li><a href="./thanhtoan.html">Đơn hàng</a></li>
+      </ul>
+    </div>
+  </div> 
+
+
+<!--Menu Trái------------------------------------------------------->
+<div class="menuL">
+  <h2> &#9776 DANH MỤC</h2>
+  <div class="menuleft">
+    <ul>
+      <li><a href="./Cate_doan.html">Đồ ăn</a></li>
+      <li><a href="./Cate_dochay.html">Đồ chay</a></i></li>
+      <li><a href="./Cate_douong.html">Đồ uống</a></i></li>
+      <li><a href="./Cate_trangmieng.html">Tráng miệng</a></i></li>
+      <li><a href="./Cate_thucpham.html">Thực phẩm</a></i></li>
+      <li><a href="./khuyenmai.html">Khuyến mãi</a></li>
+      <li><a href="./Riviu.html">Đánh giá</a></i></li>
+      <li><a href="./banchay.html">Bán chạy</a></i></li>
+      <li><a href="./yeuthich.html">Yêu thích</a></i></li>
+    </ul>
+  </div>
+</div>
+
+<!--background-->
+<div class="riviu_bg"></div>
+
+<!--Menu Phải------------------------------------------------------------------------->
+<div class="menuR">
+  <div class="tittle">
+    <h3>Món ăn nổi bật</h3>
+    <hr />
+  </div>
+  <div class="food">
+    <a href="./Product/Ads_right_1.html"><img src="./img/ads_right_1.jpg" alt=""></a>
+    <span>
+      <b><a href="./Product/Ads_right_1.html">Hokkaido Baked</a></b> <br />
+      Tầng 4, Vincom Trần Duy Hưng, Hà Nội <br />
+      <i class="fas fa-star"></i> <b>4.4</b>/5
+    </span>
+  </div>
+  <div class="food">
+    <a href="./Product/Ads_right_2.html"><img src="./img/ads_right_2.jpg" alt=""></a>
+    <span>
+      <b><a href="./Product/Ads_right_2.html">Auntie Anne's</a></b> <br />
+      Số 31 Hàng Khay, Hà Nội. <br />
+      <i class="fas fa-star"></i> <b>4.8</b>/5
+    </span>
+  </div>
+  <div class="food">
+    <a href="./Product/Ads_right_3.html"><img src="./img/ads_right_3.jpg" alt=""></a>
+    <span>
+      <b><a href="./Product/Ads_right_3.html">Gỏi cuốn tôm nhảy</a></b> <br />
+      424 Lạc Long Quân, TP.HCM <br />
+      <i class="fas fa-star"></i> <b>4.8</b>/5
+    </span>
+  </div>
+  <div class="food">
+    <a href="./Product/Ads_right_4.html"><img src="./img/ads_right_4.jpg" alt=""></a>
+    <span>
+      <b><a href="./Product/Ads_right_4.html">Bibibap-Korean...</a></b> <br />
+      51 D5 p.25, q.Bình Thạnh, TP.HCM<br />
+      <i class="fas fa-star"></i> <b>4.0</b>/5
+    </span>
+  </div>
+  <div class="food">
+    <a href="./Product/Ads_right_5.html"><img src="./img/ads_right_5.jpg" alt=""></a>
+    <span>
+      <b><a href="./Product/Ads_right_5.html">Phở Thìn</a></b> <br />
+      110 Lê Thị Hồng Gấm, q.1, TP.HCM <br />
+      <i class="fas fa-star"></i> <b>5</b>/5
+    </span>
+  </div>
+</div>
+</div>
+
+
+<!--Riviu---------------------------------------------------------->
+<div class="riviu">
+    
+        <div class="riviu_menu">
+          <ul>
+            <li><a href="">Tất cả</a></li>
+            <li><a href="">Ăn sáng</a></li>
+            <li><a href="">Ăn trưa</a></li>
+            <li><a href="">Ăn vặt</a></li>
+            <li><a href="">Cà phê</a></li>
+            <li><a href="">Du lịch</a></li>
+          </ul>
+        </div>
+
+        <div class="riviu_container">
+          <!--Post1-->
+          <div class="riviu_container_post">
+             <div class="riviu_container_head">
+               <div class="riviu_container_head_left">
+                   <div class="riviu_container_head_avt"><img src="./img/Riviu_img/riviu_user1.jpg"></div>
+                   <div class="riviu_container_head_name">
+                     <b>Meo Meo Meo</b> <br/>
+                     30/11/2021
+                   </div>
+               </div>
+               <div class="riviu_container_head_right"><i class="fas fa-ellipsis-h"></i></div>
+             </div>
+
+             <div class="riviu_container_content">
+               <h1>Jeju giữa lòng Sài Gòn</h1>
+               <p>
+                📍 448, Phạm Văn Đồng, p.13, q.Bình Thạnh <br/>
+                Một chiếc quán cafe mới toanh tại Sài Gòn theo phong cách đậm chất Hàn. <br/>
+                Không gian quán rộng rãi, có sân đằng trước, bên trong được thiết kế theo tông trắng xinh xinh 🥰 <br/>
+                Với nhiều góc chụp siu xịn :)) các bạn nên đi vào buổi sáng sẽ chụp hình đẹp hơnnn.<br/>
+                Nước uống tại đây khoảng từ 49k trở lên. <br/>
+                ⭐️Đánh giá 8.5/10 <br/>
+                <i>#cafe #cafehanquoc #genZfoodriviu</i>
+               </p>
+             </div>
+
+             <div class="riviu_container_img">
+               <img src="./img/Riviu_img/Post 1.png">
+             </div>
+
+             <div class="riviu_container_react">
+               <div class="riviu_container_react_icon"> <img src="./img/Riviu_img/Riviu_react.png"> 1K</div>
+               <div class="riviu_container_react_cmt"> 870 bình luận 591 lượt chia sẻ</div>
+             </div>
+            <hr/>
+             <div class="riviu_container_react_2">
+               <div><i class="far fa-heart"></i> Yêu thích</div>
+               <div><i class="far fa-comment-alt"></i> Bình luận</div>
+               <div><i class="far fa-share-square"></i> Chia sẻ</div>
+             </div>
+          </div>
+          
+          <!--Post2-->
+          <div class="riviu_container_post">
+            <div class="riviu_container_head">
+              <div class="riviu_container_head_left">
+                  <div class="riviu_container_head_avt"><img src="./img/Riviu_img/riviu_user2.jpg"></div>
+                  <div class="riviu_container_head_name">
+                    <b>Cạp cạp</b> <br/>
+                    27/11/2021
+                  </div>
+              </div>
+              <div class="riviu_container_head_right"><i class="fas fa-ellipsis-h"></i></div>
+            </div>
+
+            <div class="riviu_container_content">
+              <h1>☕️ THREE O CLOCK ☕️</h1>
+              <p>
+               📍Địa chỉ : 462 Nguyễn Thị Minh Khai, Q3 <br/>
+               💵 Giá Cả : 39k - 60k<br/>
+               ⏰ 7:00-22:00<br/>
+               Chắc đây cũng là quán quen tụ tập của nhiều người, quán chủ yếu dành cho các bạn hay chạy deadline với các bàn lớn ổ điện style đơn giản.
+               Quán đang có các bánh phục vụ giáng sinh.<br/>
+               ⭐️Đánh giá 9.5/10<br/>
+               <i>#cafe #3H #genZfoodriviu</i>
+              </p>
+            </div>
+
+            <div class="riviu_container_img">
+              <img src="./img/Riviu_img/Post 2.png">
+            </div>
+
+            <div class="riviu_container_react">
+              <div class="riviu_container_react_icon"> <img src="./img/Riviu_img/Riviu_react.png"> 1K3</div>
+              <div class="riviu_container_react_cmt"> 911 bình luận 604 lượt chia sẻ</div>
+            </div>
+           <hr/>
+            <div class="riviu_container_react_2">
+              <div><i class="far fa-heart"></i> Yêu thích</div>
+              <div><i class="far fa-comment-alt"></i> Bình luận</div>
+              <div><i class="far fa-share-square"></i> Chia sẻ</div>
+            </div>
+         </div>
+        </div>
+      <div class="riviu_more">Xem thêm +</div>
+      <!--Form đăng bài-->
+      <div class="riviu_form">
+        <input type="text" name="text" placeholder="Viết đánh giá của bạn..." required/>
+      </div>
+
+</div>
+
+<!--Footer neeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
+<div class="footer">
+  <hr />
+  <div class="footer_footer">
+    <div class="footer1">
+      <h2>Chăm sóc khách hàng</h2>
+      <ul>
+        <li><a href="">Trung Tâm Trợ Giúp</a></li> <br/>
+        <li><a href="">Hướng Dẫn Mua Hàng</a></li><br/>
+        <li><a href="">Hướng Dẫn Bán Hàng</a></li><br/>
+        <li><a href="">Thanh Toán</a></li><br/>
+        <li><a href="">Vận Chuyển</a></li><br/>
+        <li> Chăm Sóc Khách Hàng: <a href="">cskh@genz.vn</a></li><br/>
+        <li>Báo Lỗi Bảo Mật: <a href=""> security@genz.vn</a></li>
+      </ul>
+    </div>
+    <div class="footer2">
+      <h2>GenZ Food</h2>
+      <ul>
+        <li><a href="">Giới Thiệu</a></li> <br/>
+        <li><a href="">Tuyển Dụng</a></li><br/>
+        <li><a href="">Điều Khoản</a></li><br/>
+        <li><a href="">Chính Sách Bảo Mật</a></li><br/>
+        <li><a href="">Chương Trình tiếp Thị</a></li><br/>
+        <li><a href="">Liên Hệ Truyền Thông</a></li>
+      </ul>
+    </div>
+    <div class="footer3">
+      <h2>Ứng dụng GenZ Food</h2>
+      <ul>
+        <li><a href=""><i class="fab fa-facebook"></i> Facebook</a></li> <br/>
+        <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li><br/>
+        <li><a href=""></a><i class="fab fa-twitter"></i> Twitter</a></li><br/>
+        <li><a href=""><i class="fab fa-viber"></i> Viber</li></a>
+      </ul>
+    </div>
+    <div class="footer4">
+      <h2> Địa chỉ Công Ty </h2>
+      <ul>
+        <li><a href=""><b>Địa chỉ: </b>828 Sư Vạn Hạnh, Phường 13,<br/><br/> Quận 10, TP. Hồ Chí Minh</a></li><br/>
+        <li><a href=""> <b>Điện thoại:</b>(+84) 38 632 052</a></li><br/>
+        <li><a href=""><b>Fax:</b>(+84 28) 38 650 991</a></li><br/>
+        <li><a href=""><b>Email:</b>GenZfood@gmail.com</a></li><br/>
+        <img src="./img/logo_footer-01.png" alt="">
+      </ul>
+    </div>
+  </div>
+
+  <!--Copy right-->
+  <div class="coppyright">
+    © Copyright 2021 - Bản quyền thuộc Công Ty TNHH GenZ - GenZ.vn
+    </footer>
+  </div>
+</div>
+
+    <script src="https://kit.fontawesome.com/14e8760cb2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/header.js"></script>
+    <script src="./js/giohang.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>
