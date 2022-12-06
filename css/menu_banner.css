@@ -58,7 +58,7 @@
   margin-right: 18px;
 }
 .slide-container {
-  width: 1180px;
+  width: 1220px;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -69,7 +69,7 @@
   transition: all 0.5s;
 }
 .chuyen-slide img{
-  width: 1180px;
+  width: 1220px;
   height: 400px;
   float: left;
 }
@@ -86,10 +86,10 @@
 }
 .dieuhuong i:last-child{
   position: relative;
-  left: 1090px;
+  left: 1135px;
 }
 
-.banner_page{
+/* .banner_page{
   width: 97%;
   height: 400px;
   float: right;
@@ -100,7 +100,7 @@
 .banner_page img{
   width: 100%;
   height: 100%;
-}
+} */
 
 /*Menu phải------------------------------------------------------*/
 .menuR {
