@@ -401,3 +401,182 @@ outline: none;
     color: white;
     padding: 17px;
 }
+
+.Slider{
+    width: 100%;
+    height: 435px;
+    padding-top: 5px;
+  }
+  .menuL {
+    width: 14.5%;
+    background-color: white;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 19px;
+  }
+  .menuL h2{
+    padding-left: 5px;
+    margin-top: 15px;
+  }
+  .menuleft {
+    width: 100%;
+    font-size: 18px;
+  }
+  .menuleft ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menuleft ul a {
+    text-decoration: none;
+  }
+  .menuleft li {
+    width: 100%;
+    height: 41.4px;
+    border: 1px solid gainsboro;
+    padding-left: 10px;
+    padding-top: 12px;
+  }
+  .menuleft li:hover {
+    background-color: rgb(151, 219, 130);
+  }
+  .menuleft li a {
+    color: black;
+  }
+  .menuleft li a:hover {
+    color: white;
+  }
+  .menuL img {
+    width: 100%;
+    height: 280px;
+    margin-top: 10px;
+  }
+  
+  /*Baner------------------------------------------------*/
+  .banner {
+    width: 97%;
+    height: 400px;
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 18px;
+  }
+  .slide-container {
+    width: 1220px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .chuyen-slide {
+    width: 9999px;
+    transition: all 0.5s;
+  }
+  .chuyen-slide img{
+    width: 1220px;
+    height: 400px;
+    float: left;
+  }
+  .dieuhuong{
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    top: 46%;
+    padding-left: 17px;
+    display: none;
+  }
+  .banner:hover .dieuhuong{
+     display: block;
+  }
+  .dieuhuong i:last-child{
+    position: relative;
+    left: 1135px;
+  }
+  
+  /* .banner_page{
+    width: 97%;
+    height: 400px;
+    float: right;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 18px;
+  }
+  .banner_page img{
+    width: 100%;
+    height: 100%;
+  } */
+  
+  /*Menu phải------------------------------------------------------*/
+  .menuR {
+    width: 16%;
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+    margin-top: 10px;
+    background: white;
+  }
+  .tittle {
+    color: gray;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 13px;
+  }
+  
+  .food {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+  .food img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8%;
+    margin-right: 8px;
+    margin-left: 5px;
+  }
+  .food i {
+    color: rgb(255, 230, 0);
+  }
+  .food:hover {
+    height: 85px;
+    background-color: rgb(241, 237, 237);
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: default;
+  }
+  .food img:hover {
+    width: 70px;
+    height: 70px;
+  }
+  .food a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  /*---------------ADS--------------------------------*/
+  .ads_home {
+    width: 99%;
+    height: 300px;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .ads_1{
+    width: 100%;
+    padding: 5px 14px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ads_box1{
+    width: 600px;
+    height: 260px;
+  }
+  .ads_box1 img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  

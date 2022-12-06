@@ -6,47 +6,47 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
-.header{
+.headersignup{
     width: 100%;
     height: 70px;
     background-color:white;
     border: 1px solid #ccc;
     padding-top: 5px;
 }
-.header img{
+.headersignup img{
     width: 270px;
     height: 60px;
     margin-left: 39%;
 
 }
-.container form{
+.containersignup form{
     width: 450px;
     margin-left: 50%;
     transform: translateX(-50%);
 }
-.content{
+.contentsignup{
     margin: 30px 15px;
 }
-.box_container{
+.box_containersignup{
     border: 0.5px solid #ccc;
     margin-top: 50px;
     margin-bottom: 60px;
     border-radius: 5px;
 }
-.container .box_container h1{
+.containersignup .box_containersignup h1{
     text-align: center;
     margin-top: 15px;
 }
-.input_group{
+.input_groupsignup{
     margin-bottom: 25px;
 }
-.input_group p{
+.input_groupsignup p{
     margin-bottom: 8px;
 }
-.input_group .icon_input{
+.input_groupsignup .icon_inputsignup{
     position: relative;
 }
-.icon_input .icon_sub{
+.icon_inputsignup .icon_subsignup{
     width: 35px;
     height: 35px;
     position: absolute;
@@ -55,26 +55,26 @@ html{
     text-align: center;
     font-size: 15px;
 }
-.icon_input .icon_sub i{
+.icon_inputsignup .icon_subsignup i{
     line-height: 35px;
 }
-.icon_input input{
+.icon_inputsignup input{
     font-size: 15px;
     padding-right: 10px;
 }
 
-.container .content input{
+.containersignup .contentsignup input{
     width: 100%;
     height: 35px;
     padding-left: 35px;
     border-radius: 5px;
     border: 0.5px solid #ccc;
 }
-.content .input_group p{
+.contentsignup .input_groupsignup p{
     font-size: 18px;
 }
 
-.login_input {
+.login_inputsignup {
     width: 100%;
     height: 35px;
     margin: 0 0 15px 0;
@@ -82,25 +82,19 @@ html{
     border: 0.5px solid #ccc;
     font-size: 17px;
 }
-.login_input:hover{
+.login_inputsignup:hover{
     color: white;
     /* background-image: linear-gradient(0,rgb(150,205,134),rgb(96,188,100)); */
     background-color:  #545AA6;
     cursor: pointer;
 }
 
-.span_dk{
+.span_dksignup{
     margin-left: 27%;
     font-size: 14px;
 }
-.span_dk a{
+.span_dksignup a{
     font-size: 14px;
     color: blue;
 }
 
-.footer hr{
-    margin: 0 15px 20px 15px;
-}
-.footer h2 {
-    margin-bottom: 15px;
-}

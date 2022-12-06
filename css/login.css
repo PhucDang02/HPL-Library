@@ -6,47 +6,47 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
-.header{
+.headerlogin{
     width: 100%;
     height: 70px;
     background-color:white;
     border: 1px solid #ccc;
     padding-top: 5px;
 }
-.header img{
+.headerlogin img{
     width: 270px;
     height: 60px;
     margin-left: 39%;
 
 }
-.container form{
+.containerlogin form{
     width: 450px;
     margin-left: 50%;
     transform: translateX(-50%);
 }
-.content{
+.contentlogin{
     margin: 30px 20px 15px;
 }
-.box_container{
+.box_containerlogin{
     border: 0.5px solid #ccc;
     margin-top: 50px;
     margin-bottom: 60px;
     border-radius: 5px;
 }
-.container .box_container h1{
+.containerlogin .box_containerlogin h1{
     text-align: center;
     margin-top: 15px;
 }
-.input_group{
+.input_grouplogin{
     margin-bottom: 30px;
 }
-.input_group p{
+.input_grouplogin p{
     margin-bottom: 8px;
 }
-.input_group .icon_input{
+.input_grouplogin .icon_inputlogin{
     position: relative;
 }
-.icon_input .icon_sub{
+.icon_inputlogin .icon_sublogin{
     width: 35px;
     height: 35px;
     position: absolute;
@@ -55,23 +55,23 @@ html{
     text-align: center;
     font-size: 15px;
 }
-.icon_input .icon_sub i{
+.icon_inputlogin .icon_sublogin i{
     line-height: 35px;
 }
-.icon_input input{
+.icon_inputlogin input{
     font-size: 15px;
     padding-right: 10px;
 }
 
 
-.container .content input{
+.containerlogin .contentlogin input{
     width: 100%;
     height: 35px;
     padding-left: 35px;
     border-radius: 5px;
     border: 0.5px solid #ccc;
 }
-.content .input_group p{
+.contentlogin .input_grouplogin p{
     font-size: 17px;
 }
 
@@ -121,9 +121,3 @@ html{
     color: blue;
 }
 
-.footer hr{
-    margin: 0 15px 20px 15px;
-}
-.footer h2 {
-    margin-bottom: 15px;
-}
