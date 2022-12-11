@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,35 +13,17 @@
   <link rel="stylesheet" href="./css/footer.css">
   <link rel="stylesheet" href="./css/adstyle.css">
   <link rel="stylesheet" href="./css/container.css">
-  <link rel="stylesheet" href="./css/giohang.css">
   <link rel="stylesheet" href="./css/product.css">
-  <link rel="stylesheet" href="./css/Category.css">
-  <link rel="stylesheet" href="./css/riviu.css">
-  <link rel="stylesheet" href="./css/thanhtoan.css">
 
   <link rel="stylesheet" href="./css/login.css">
   <link rel="stylesheet" href="./css/signup.css">
   <!-- Favicon -->
-	<link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="icon" type="image/png" href="./img/favicon.png">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script>
-    var loader = function() {
-        setTimeout(function() {
-            $('#preloader').css({ 'opacity': 0, 'visibility':'hidden' });
-        }, 2000);
-    };
-    $(function(){
-        loader();
-    });
-  </script>
 </head>
+
 <body>
-  <div id="preloader">
-    <div id="loader">
-      <img src="./img/logo.png">
-    </div>
-  </div>
   <!-- block element modifier -->
   <div id="app">
     <header class="header">
@@ -83,7 +66,7 @@
             <li class="header_navbar-item header_navbar-item-header_navbar-item--separate">
               <a id="valueusername" href="./login.html">Đăng nhập</a>
             </li>
-            <li class="header_navbar-item header_navbar-item--strong"> 
+            <li class="header_navbar-item header_navbar-item--strong">
               <a onclick="Output()" id="logout" href="./signup.html">Đăng ký</a>
             </li>
           </ul>
@@ -92,12 +75,12 @@
         <div class="header-with-search">
           <div class="header__logo">
             <div class="header-logo-img">
-              <a href="./index.html"><img src="./img/logo.png" alt="logo team UwU"></a>
+              <a href="./index.html"><img src="./img/logo.png" alt="logoHPL"></a>
             </div>
           </div>
 
           <div class="header__search">
-                               
+
             <div class="header__search-selection">
               <span class="header__search-selection-label" id="kq_address">Tất cả</span>
               <i class="header__search-selection-icon fa-solid fa-angle-down"></i>
@@ -113,7 +96,7 @@
                 <li><a href="#" onclick="Address9()">Tâm lý</a></li>
               </ul>
             </div>
-            
+
             <input type="text" class="header__search-input" placeholder="Nhập sách cần tìm...">
             <!-- list search -->
             <div class="header__search-list">
@@ -124,34 +107,10 @@
                 <li><a href="#">Ngành công nghệ thông tin điện tử viễn thông</a></li>
               </ul>
             </div>
-            
+
             <button class="header__search-btn">
               <i class="header__search-btn-icon fas fa-light fa-magnifying-glass"></i>
             </button>
-          </div>
-
-          <!-- <div class="header__cark">
-            <i class="header__cark-icon fas fa-cart-plus" onclick="showcart()"  ></i>
-            <b id="countsp">0</b>
-          </div> -->
-          <div class="showcart" id="showcart">
-            <table>
-              <tr>
-                <td>STT</td>
-              <td>Hình</td>
-              <td>Tên sản phẩm</td>
-              <td>Giá</td>
-              <td>Thành tiền</td>
-              <td>Xóa</td>
-            </tr>
-              <tbody id="mycart">
-
-              </tbody>
-              
-            </table>
-            <br>
-            <button onclick="location.href='./thanhtoan.html'">Thanh toán</a></button>
-            <button id="xoatatca" onclick="xoatatca()">Xóa tất cả</button>
           </div>
         </div>
       </div>
@@ -161,79 +120,96 @@
     <div class="Menu-top">
       <ul class="nav-menu">
         <li><a href="./home.html">Trang chủ</a></li>
-        <li><a href="./khuyenmai.html">Dịch vụ</a></li>
-        <li><a href="./Riviu.html">Giới thiệu sách</a></li>
-        <li><a href="./banchay.html">Yêu thích</a></li>
-        <li><a href="./yeuthich.html">Tra cứu</a></li>
-        <li><a href="./thanhtoan.html">Liên hệ</a></li>
+        <li><a href="./gioithieu.html">Giới thiệu</a></li>
+        <li><a href="./dichvu.html">Dịch vụ thư viện</a></li>
+        <li><a href="./gtsach.html">Giới thiệu sách</a></li>
+        <li><a href="./tracuu.html">Tra cứu</a></li>
+        <li><a href="./lienhe.html">Liên hệ</a></li>
       </ul>
     </div>
-  </div>  
+  </div>
 
-<!--------------------------Banner--------------------------------------->
-<div class="Slider">
+  <!--------------------------Banner--------------------------------------->
+  <div class="Slider">
     <!--Banner-->
-      <div class="banner">
-        <div class="slide-container">
-          <div class="dieuhuong">
-             <i class="fa fa-chevron-circle-left" onclick="Back();"></i>
-             <i class="fa fa-chevron-circle-right" onclick="Next();"></i>
-          </div>
-          <div class="chuyen-slide">
-            <img src="./img/banner1.png"> 
-            <img src="./img/banner2.jpg"> 
-            <img src="./img/banner3.jpg"> 
-            <img src="./img/banner4.jpg"> 
-            <img src="./img/banner5.jpg"> 
-          </div>
+    <div class="banner">
+      <div class="slide-container">
+        <div class="dieuhuong">
+          <i class="fa fa-chevron-circle-left" onclick="Back();"></i>
+          <i class="fa fa-chevron-circle-right" onclick="Next();"></i>
+        </div>
+        <div class="chuyen-slide">
+          <img src="./img/banner1.png">
+          <img src="./img/banner2.jpg">
+          <img src="./img/banner3.jpg">
+          <img src="./img/banner4.jpg">
+          <img src="./img/banner5.jpg">
         </div>
       </div>
-</div>
-<!--Ads home-->
-<div class="ads_home">
-  <div data-aos="zoom-in" data-aos-duration="2000" class="ads_1">
-    <div class="ads_box1">
-       <img src="./img/ads1.jpg" alt="">
-    </div>
-    <div data-aos="zoom-in" data-aos-duration="2000" class="ads_box1">
-      <img src="./img/ads1.jpg" alt="">
     </div>
   </div>
-</div>
+  <!--Ads home-->
+  <div class="ads_home">
+    <div data-aos="zoom-in" data-aos-duration="2000" class="ads_1">
+      <div class="ads_box1">
+        <img src="./img/ads1.jpg" alt="">
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="2000" class="ads_box1">
+        <img src="./img/ads1.jpg" alt="">
+      </div>
+    </div>
+  </div>
 
 
-<!--Container------------------------------------------------------------------>
-<div class="container">
-   
-    <!--Đồ ăn----------------------------------------------------------------------------------------------------->
+  <!--Container------------------------------------------------------------------>
+  <div class="container">
+
+    <!--------------------------SÁCH HAY MỖI TUẦN--------------------------------------------------------------------------->
     <div data-aos="fade-up" data-aos-duration="2000" class="tittle1">
-      <a href="./index.html">SÁCH MỚI</a>
+      <a>- SÁCH HAY MỖI TUẦN -</a>
     </div>
     <div data-aos="fade-up" data-aos-duration="2000" class="product1">
       <div class="col1">
         <div class="img1">
           <div class="main_img_top">
-            <div class="round"></div>
-            <p>HOT</p>
+            <div class="round">
+              <p>HOT</p>
+            </div>
           </div>
-          <a href="./Product/Doan1.html"><img src="./img/Book/Book01.png" alt=""></a>
+          <a href="#"><img src="./img/Book/Book01.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Doan1.html">Dế mèn phiêu lưu ký</a>
+          <a href="#">Dế mèn phiêu lưu ký</a>
         </div>
-
-        <div class="Loca">
-          345 CMT8, q.10, TP.HCM 
+        <div class="author">
+          Tô Hoài
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ55.000
+        <div class="number">
+          <div class="numberofbook">
+            22 bản
           </div>
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
+          </div>
+        </div>
+      </div>
 
-          <div class="buy">
-          Đã bán 789
+      <div class="col1">
+        <div class="img1">
+          <a href="#"><img src="./img/Book/Book04.png" alt=""></a>
+        </div>
+        <div class="name">
+          <a href="#">Hoàng tử bé</a>
+        </div>
+        <div class="author">
+          Vũ Thị Thu Hà
+        </div>
+        <div class="number">
+          <div class="numberofbook">
+            17 bản
+          </div>
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
@@ -241,584 +217,243 @@
       <div class="col1">
         <div class="img1">
           <div class="main_img_top">
-            <div class="round"></div>
-            <p>HOT</p>
+            <div class="round">
+              <p>HOT</p>
+            </div>
           </div>
-          <a href="./Product/Doan2.html"><img src="./img/CateDoan/comtam.jpg" alt=""></a>
+          <a href="#"><img src="./img/Book/Book14.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Doan2.html">Cơm Sà Bì Chưởng</a>
+          <a href="#">Phải đúng trái sai</a>
         </div>
-
-        <div class="Loca">
-          85 Lý Tự Trọng 
+        <div class="author">
+          Michael SANDEL
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ40.000
+        <div class="number">
+          <div class="numberofbook">
+            25 bản
           </div>
-
-          <div class="buy">
-          Đã bán 999
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
 
       <div class="col1">
         <div class="img1">
-          <a href="./Product/Doan3.html"><img src="./img/CateDoan/bunrieu.jpg" alt=""></a>
+          <a href="#"><img src="./img/Book/Book07.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Doan3.html">Bún real</a>
+          <a href="#">Đơn giản</a>
         </div>
-
-        <div class="Loca">
-          206 Điện Biên Phủ, q1
+        <div class="author">
+          Cơ Hiểu An
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ35.000
+        <div class="number">
+          <div class="numberofbook">
+            20 bản
           </div>
-
-          <div class="buy">
-          Đã bán 461
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
 
       <div class="col1">
         <div class="img1">
-          <a href="./Product/Doan4.html"><img src="./img/CateDoan/comga.jpg" alt=""></a>
+          <a href="#"><img src="./img/Book/Book05.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Doan4.html">Cơm gà xối mỡ</a>
+          <a href="#">Thỏ bảy màu</a>
         </div>
-
-        <div class="Loca">
-          57 Hoàng Sa, q3 
+        <div class="author">
+          Huỳnh Thái Ngọc
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ35.000
+        <div class="number">
+          <div class="numberofbook">
+            19 bản
           </div>
-
-          <div class="buy">
-          Đã bán 700
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
+
     </div>
 
-<!--Đồ chay------------------------------------------------------------------------------------------------->
-<div data-aos="fade-up" data-aos-duration="2000" class="tittle1">
-  <a href="./Cate_dochay.html">ĐỒ CHAY</a>
-</div>
-<div data-aos="fade-up" data-aos-duration="2000" class="product1">
-  <div class="col1">
-    <div class="img1">
-      <div class="main_img_top">
-        <div class="round"></div>
-        <p>HOT</p>
-      </div>
-      <a href="./Product/Dochay1.html"><img src="./img/CateChay/comtamchay.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Dochay1.html">Cơm tấm chay</a>
-    </div>
-
-    <div class="Loca">
-      90 Xô Viết Nghệ Tĩnh
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ25.000
-      </div>
-
-      <div class="buy">
-      Đã bán 237
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <a href="./Product/Dochay2.html"><img src="./img/CateChay/dauhu.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Dochay2.html">Đậu hủ chay</a>
-    </div>
-
-    <div class="Loca">
-      12 Cao Thắng, q3 
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ15.000
-      </div>
-
-      <div class="buy">
-      Đã bán 601
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <div class="main_img_top">
-        <div class="round"></div>
-        <p>HOT</p>
-      </div>
-      <a href="./Product/Dochay3.html"><img src="./img/CateChay/comsen.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Dochay3.html">Cơm sen</a>
-    </div>
-
-    <div class="Loca">
-      124 Trần Bình Trọng
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ40.000
-      </div>
-
-      <div class="buy">
-      Đã bán 399
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <a href="./Product/Dochay4.html"><img src="./img/CateChay/raucuxao.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Dochay4.html">Rau củ xào chay</a>
-    </div>
-
-    <div class="Loca">
-      1037 Trường Sa, q3
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ35.000
-      </div>
-
-      <div class="buy">
-      Đã bán 623
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!--Đồ uống-------------------------------------------------------------------------------------------------->
+    <!--------------------------GIỚI THIỆU SÁCH--------------------------------------------------------------------------->
     <div data-aos="fade-up" data-aos-duration="2000" class="tittle1">
-      <a href="./Cate_douong.html">ĐỒ UỐNG</a>
+      <a>- SÁCH MỚI -</a>
     </div>
     <div data-aos="fade-up" data-aos-duration="2000" class="product1">
       <div class="col1">
         <div class="img1">
           <div class="main_img_top">
-            <div class="round"></div>
-            <p>HOT</p>
           </div>
-          <a href="./Product/Douong1.html"><img src="./img/CateDouong/cafe.jpg" alt=""></a>
+          <a href="#"><img src="./img/Book/Book02.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Douong1.html">Phin Phúc Long</a>
+          <a href="#">Nhà giả kim</a>
         </div>
-
-        <div class="Loca">
-          350 Lê Văn Sỹ, q3
+        <div class="author">
+          Paulo Coelho
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ65.000
+        <div class="number">
+          <div class="numberofbook">
+            27 bản
           </div>
-
-          <div class="buy">
-          Đã bán 555
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
 
       <div class="col1">
         <div class="img1">
-          <div class="main_img_top">
-            <div class="round"></div>
-            <p>HOT</p>
-          </div>
-          <a href="./Product/Douong2.html"><img src="./img/CateDouong/tradao.jpg" alt=""></a>
+          <a href="#"><img src="./img/Book/Book16.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Douong2.html">Trà đào camxamita</a>
+          <a href="#">Đàm phán quốc tế</a>
         </div>
-
-        <div class="Loca">
-          820 Sư Vạn Hạnh, q10 
+        <div class="author">
+          TS. Tôn Sinh Thành
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ22.000
+        <div class="number">
+          <div class="numberofbook">
+           45 bản
           </div>
-
-          <div class="buy">
-          Đã bán 1k+
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
 
       <div class="col1">
         <div class="img1">
-          <a href="./Product/Douong3.html"><img src="./img/CateDouong/tratraicay.jpg" alt=""></a>
+          <a href="#"><img src="./img/Book/Book11.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Douong3.html">Trà trái cây</a>
+          <a href="#">Cũng chỉ là hạt bụi</a>
         </div>
-
-        <div class="Loca">
-          72 Âu Cơ, q.Tân Phú
+        <div class="author">
+          Mộc Phù Sinh
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ25.000
+        <div class="number">
+          <div class="numberofbook">
+            25 bản
           </div>
-
-          <div class="buy">
-          Đã bán 490
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
 
       <div class="col1">
         <div class="img1">
-          <div class="main_img_top">
-            <div class="round"></div>
-            <p>HOT</p>
-          </div>
-          <a href="./Product/Douong4.html"><img src="./img/CateDouong/travai.jpg" alt=""></a>
+          <a href="#"><img src="./img/Book/Book09.png" alt=""></a>
         </div>
-
         <div class="name">
-          <a href="./Product/Douong4.html">Trà vải Phúc Long</a>
+          <a href="#">Sống Mòn</a>
         </div>
-
-        <div class="Loca">
-          117 Nguyễn Đình Chiểu
+        <div class="author">
+          Nam Cao
         </div>
-
-        <div class="price_buy">
-          <div class="price">
-          đ55.000
+        <div class="number">
+          <div class="numberofbook">
+          37 bản
           </div>
-
-          <div class="buy">
-          Đã bán 999
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
           </div>
         </div>
       </div>
-    </div>
 
-<!--Tráng miệng------------------------------------------------------------------------------------------------>
-<div data-aos="fade-up" data-aos-duration="2000" class="tittle1">
-  <a href="./Cate_trangmieng.html">TRÁNG MIỆNG</a>
-</div>
-<div data-aos="fade-up" data-aos-duration="2000" class="product1">
-  <div class="col1">
-    <div class="img1">
-      <a href="./Product/Trangmieng1.html"><img src="./img/CateTrangmieng/cupcake.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Trangmieng1.html">Bánh Cupcake</a>
-    </div>
-
-    <div class="Loca">
-      946 Điện Biên Phủ
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ39.000
+      <div class="col1">
+        <div class="img1">
+          <a href="#"><img src="./img/Book/Book15.png" alt=""></a>
+        </div>
+        <div class="name">
+          <a href="#">Đường cách mệnh</a>
+        </div>
+        <div class="author">
+          Nguyễn Ái Quốc
+        </div>
+        <div class="number">
+          <div class="numberofbook">
+            39 bản
+          </div>
+          <div class="heart">
+            <i class="fas fa-light fa-heart"></i>
+          </div>
+        </div>
       </div>
 
-      <div class="buy">
-      Đã bán 400
+    </div>
+
+  </div>
+
+  <!--------------------------Footer----------------------------->
+  <div class="footer">
+    <hr />
+    <div class="footer_footer">
+      <div class="footer1">
+        <h2>Chăm sóc khách hàng</h2>
+        <ul>
+          <li><a href="">Trung Tâm Trợ Giúp</a></li> <br />
+          <li><a href="">Hướng Dẫn</a></li><br />
+          <li><a href="">Thanh Toán</a></li><br />
+          <li><a href="">Vận Chuyển</a></li><br />
+          <li> Chăm Sóc Khách Hàng: <a href="">cskh@hpllibrary.vn</a></li><br />
+          <li>Báo Lỗi Bảo Mật: <a href=""> security@hpllibrary.vn</a></li>
+        </ul>
       </div>
+      <div class="footer2">
+        <h2>HPL Library</h2>
+        <ul>
+          <li><a href="">Giới Thiệu</a></li> <br />
+          <li><a href="">Tuyển Dụng</a></li><br />
+          <li><a href="">Điều Khoản</a></li><br />
+          <li><a href="">Chính Sách Bảo Mật</a></li><br />
+          <li><a href="">Liên Hệ Truyền Thông</a></li>
+        </ul>
+      </div>
+      <div class="footer3">
+        <h2>Ứng dụng HPL Library</h2>
+        <ul>
+          <li><a href=""><i class="fab fa-facebook"></i> Facebook</a></li> <br />
+          <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li><br />
+          <li><a href=""><i class="fab fa-twitter"></i> Twitter</a></li><br />
+          <li><a href=""><i class="fab fa-viber"></i> Viber</li></a>
+        </ul>
+      </div>
+      <div class="footer4">
+        <h2> Liên hệ </h2>
+        <ul>
+          <li><a href=""><b>Địa chỉ: </b>828 Sư Vạn Hạnh, Phường 13,<br /><br /> Quận 10, TP. Hồ Chí Minh</a></li><br />
+          <li><a href=""> <b>Điện thoại:</b>090 868 9999</a></li><br />
+          <li><a href=""><b>Fax:</b>090 868 9999</a></li><br />
+          <li><a href=""><b>Email:</b>hpllibrary@gmail.com</a></li><br />
+          <img src="./img/logo.png" alt="">
+        </ul>
+      </div>
+    </div>
+
+    <!--Copy right-->
+    <div class="coppyright">
+      © Copyright 2022 - Bản quyền thuộc HPLLibrary - HPLLibrary.vn
+      </footer>
     </div>
   </div>
 
-  <div class="col1">
-    <div class="img1">
-      <div class="main_img_top">
-        <div class="round"></div>
-        <p>HOT</p>
-      </div>
-      <a href="./Product/Trangmieng2.html"><img src="./img/CateTrangmieng/yaourt.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      
-      <a href="./Product/Trangmieng2.html">Yaourt Trái cây</a>
-    </div>
-
-    <div class="Loca">
-      755 Sư Vạn Hạnh, q10 
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ20.000
-      </div>
-
-      <div class="buy">
-      Đã bán 150
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <a href="./Product/Trangmieng3.html"><img src="./img/CateTrangmieng/panna cotta.jpg" alt=""></a>
-    </div>
-    <div class="name">
-      <a href="./Product/Trangmieng3.html">Panna Cotta</a>
-    </div>
-
-    <div class="Loca">
-      776A Phạm Văn Bạch
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ25.000
-      </div>
-
-      <div class="buy">
-      Đã bán 840
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <div class="main_img_top">
-        <div class="round"></div>
-        <p>HOT</p>
-      </div>
-      <a href="./Product/Trangmieng4.html"><img src="./img/CateTrangmieng/Tarttrung.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Trangmieng4.html">Bánh tart trứng</a>
-    </div>
-
-    <div class="Loca">
-      306/5 Nguyễn Thị Minh Khai
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ15.000
-      </div>
-
-      <div class="buy">
-      Đã bán 919
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--Thực Phẩm---------------------------------------------------------------------------------------------->
-<div data-aos="fade-up" data-aos-duration="2000" class="tittle1">
-  <a href="./Cate_thucpham.html">THỰC PHẨM</a>
-</div>
-<div data-aos="fade-up" data-aos-duration="2000" class="product1">
-  <div class="col1">
-    <div class="img1">
-      <a href="./Product/Thucpham1.html"><img src="./img/CateThucpham/bido.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Thucpham1.html">Bí đỏ</a>
-    </div>
-
-    <div class="Loca">
-      BigC Tô Hiến Thành, q10
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ35.000
-      </div>
-
-      <div class="buy">
-      Đã bán 1k+
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <div class="main_img_top">
-        <div class="round"></div>
-        <p>HOT</p>
-      </div>
-      <a href="./Product/Thucpham2.html"><img src="./img/CateThucpham/cahoi.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Thucpham2.html">Cá hồi Nauy</a>
-    </div>
-
-    <div class="Loca">
-      138 Nam Kỳ Khởi Nghĩa
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-       đ400.000
-      </div>
-
-      <div class="buy">
-      Đã bán 360
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <a href="./Product/Thucpham3.html"><img src="./img/CateThucpham/cachua.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Thucpham3.html">Cà chua</a>
-    </div>
-
-    <div class="Loca">
-      189C Cống Quỳnh
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ20.000
-      </div>
-
-      <div class="buy">
-      Đã bán 739
-      </div>
-    </div>
-  </div>
-
-  <div class="col1">
-    <div class="img1">
-      <a href="./Product/Thucpham4.html"><img src="./img/CateThucpham/dauhu.jpg" alt=""></a>
-    </div>
-
-    <div class="name">
-      <a href="./Product/Thucpham4.html">Đậu hủ</a>
-    </div>
-
-    <div class="Loca">
-      573 Nguyễn Kiệm
-    </div>
-
-    <div class="price_buy">
-      <div class="price">
-      đ12.000
-      </div>
-
-      <div class="buy">
-      Đã bán 999
-      </div>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<!--------------------------Footer----------------------------->
-<div class="footer">
-  <hr />
-  <div class="footer_footer">
-    <div class="footer1">
-      <h2>Chăm sóc khách hàng</h2>
-      <ul>
-        <li><a href="">Trung Tâm Trợ Giúp</a></li> <br/>
-        <li><a href="">Hướng Dẫn</a></li><br/>
-        <li><a href="">Thanh Toán</a></li><br/>
-        <li><a href="">Vận Chuyển</a></li><br/>
-        <li> Chăm Sóc Khách Hàng: <a href="">cskh@hpllibrary.vn</a></li><br/>
-        <li>Báo Lỗi Bảo Mật: <a href=""> security@hpllibrary.vn</a></li>
-      </ul>
-    </div>
-    <div class="footer2">
-      <h2>HPL Library</h2>
-      <ul>
-        <li><a href="">Giới Thiệu</a></li> <br/>
-        <li><a href="">Tuyển Dụng</a></li><br/>
-        <li><a href="">Điều Khoản</a></li><br/>
-        <li><a href="">Chính Sách Bảo Mật</a></li><br/>
-        <li><a href="">Liên Hệ Truyền Thông</a></li>
-      </ul>
-    </div>
-    <div class="footer3">
-      <h2>Ứng dụng HPL Library</h2>
-      <ul>
-        <li><a href=""><i class="fab fa-facebook"></i> Facebook</a></li> <br/>
-        <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li><br/>
-        <li><a href=""><i class="fab fa-twitter"></i> Twitter</a></li><br/>
-        <li><a href=""><i class="fab fa-viber"></i> Viber</li></a>
-      </ul>
-    </div>
-    <div class="footer4">
-      <h2> Liên hệ </h2>
-      <ul>
-        <li><a href=""><b>Địa chỉ: </b>828 Sư Vạn Hạnh, Phường 13,<br/><br/> Quận 10, TP. Hồ Chí Minh</a></li><br/>
-        <li><a href=""> <b>Điện thoại:</b>090 868 9999</a></li><br/>
-        <li><a href=""><b>Fax:</b>090 868 9999</a></li><br/>
-        <li><a href=""><b>Email:</b>hpllibrary@gmail.com</a></li><br/>
-        <img src="./img/logo.png" alt="">
-      </ul>
-    </div>
-  </div>
-
-  <!--Copy right-->
-  <div class="coppyright">
-    © Copyright 2022 - Bản quyền thuộc HPLLibrary - HPLLibrary.vn
-    </footer>
-  </div>
-</div>
-
-    <script src="https://kit.fontawesome.com/14e8760cb2.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script src="./js/header.js"></script>
-    <script src="./js/banner.js"></script>
-    <script src="./js/giohang.js"></script>
-    <script src="./js/login.js"></script>
+  <script src="https://kit.fontawesome.com/14e8760cb2.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="./js/header.js"></script>
+  <script src="./js/banner.js"></script>
+  <script src="./js/giohang.js"></script>
+  <script src="./js/login.js"></script>
 </body>
+
 </html>

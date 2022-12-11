@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Admin</title>
+    <title>Tài khoản của tôi</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="./css/adstyle.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="./img/favicon.png">
@@ -107,8 +107,81 @@
             </nav>
         </div>
 
-        <!-----------Footer----------->
+        <!-----------Right----------->
         <div id="layoutSidenav_content">
+            <div class="row">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-3"></div>
+                <div class="col-12 col-xl-8">
+                    <div class="card card-body border-1 mb-4" style="margin-left: 5%;">
+                        <h2 class="h5 mb-4">Thông tin chung</h2>
+                        <form id="form_info" action="./admin.html" method="post">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div>
+                                            <label for="hoten">Họ tên</label>
+                                            <input class="form-control" id="hoten" name="hoten" type="text"
+                                                placeholder="" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div>
+                                            <label for="ngaysinh">Ngày sinh</label>
+                                            <input class="form-control" id="ngaysinh" name="ngaysinh" type="text"
+                                                placeholder="" value="" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="gender">Giới tính</label>
+                                        <select class="form-select mb-0" id="gender" aria-label="Gender select example"
+                                            name="gioitinh">
+                                            <option value="-1">Nam</option>
+                                            <option value="0">Nữ</option>
+                                            <option value="1">Khác</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div>
+                                            <label for="sdt">Số điện thoại</label>
+                                            <input class="form-control" id="sdt" name="sdt" type="text" placeholder=""
+                                                value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div>
+                                            <label for="email">Email</label>
+                                            <input class="form-control" id="email" name="email" type="text"
+                                                placeholder="" value="" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div>
+                                            <label for="diachi">Địa chỉ</label>
+                                            <input class="form-control" id="diachi" name="diachi" type="text"
+                                                placeholder="" value="" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <div>
+                                    <label for="chucvu">Chức vụ</label>
+                                    <input class="form-control" id="chucvu" name="chucvu" type="text"
+                                        placeholder="Admin" value="" disabled>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-add mt-2 animate-up-2" type="submit">Cập nhật thông tin</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer-->
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">

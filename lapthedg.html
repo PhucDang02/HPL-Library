@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Quản lý độc giả</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="./css/adstyle.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.min.css">
+</head>
+
+<body class="sb-nav-fixed">
+    <!-------Top------->
+    <nav class="sb-topnav navbar navbar-expand navbar-dark">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="./admin.html">Quản trị viên</a>
+        <!-- Navbar Search-->
+        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <div class="input-group" style="margin-left: 19%;">
+                <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..."
+                    aria-describedby="btnNavbarSearch" />
+                <button class="btn btn-primary" id="btnNavbarSearch" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </form>
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" style="color: #212529; font-size: 1.5em"><i class="fa-solid fa-circle-user"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="./qltaikhoan.html">Quản lý tài khoản</a></li>
+                    <li><a class="dropdown-item" href="./admin.html">Cài đặt</a></li>
+                    <li>
+                        <hr class="dropdown-divider"/>
+                    </li>
+                    <li><a class="dropdown-item" href="./login.html">Đăng xuất</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-------------Left----------------->
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <a class="nav-link" href="./qluser.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-light fa-user"></i></div>
+                            Quản lý người dùng
+                        </a>
+                        <a class="nav-link" href="./qlsach.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                            Quản lý sách
+                        </a>
+                        <a class="nav-link" href="./lapthedg.html">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-address-card"></i></div>
+                            Lập thẻ độc giả
+                        </a>
+                        <a class="nav-link" href="./giahanthedg.html">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-repeat"></i></div>
+                            Gia hạn/ Cấp lại thẻ
+                        </a>
+                        <a class="nav-link" href="./huythedg.html">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-rectangle-xmark"></i></div>
+                            Hủy thẻ
+                        </a>
+                        <a class="nav-link" href="./muonsach.html">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-book-open"></i></div>
+                            Mượn sách
+                        </a>
+                        <a class="nav-link" href="./trasach.html">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-money-check"></i></div>
+                            Trả sách
+                        </a><a class="nav-link" href="./thutienphat.html">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-money-check"></i></div>
+                            Thu tiền phạt
+                        </a>
+                        <a class="nav-link" href="giahanpmsach.html">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-repeat"></i></div>
+                            Gia hạn phiếu mượn sách
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Khác</div>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Báo cáo, thống kê
+                        </a>
+                        <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSe36klb6FVo01TdlLZ4Q6-1riBfI-31qQkOArn2jjzq1IAkuw/viewform">
+                            <div class="sb-nav-link-icon"><i class="fas fa-solid fa-file"></i></div>
+                            Yêu cầu đặt sách
+                        </a>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                            Quy định thư viện
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-----------Right----------->
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-2"></div>
+
+                <div class="px-4">
+                    <button class="btn btn-add d-inline-flex align-items-center me-2 " data-bs-toggle="modal"
+                        data-bs-target="#add">
+                        <i class="fa-regular fa-plus me-2"></i>
+                        Thêm độc giả
+                    </button>
+                </div>
+
+                <div class="container-fluid px-4">
+                    <div class="card mb-4">
+                        <!--Header-->
+                        <!-- <div class="card-header">
+                                <svg class="svg-inline--fa fa-table me-1" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="table" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""></svg>
+                                 <i class="fas fa-table me-1"></i>
+                                Danh sách Nhân viên
+                            </div> -->
+
+                        <!--Body-->
+                        <div class="card-body">
+                            <div class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+                                <div class="dataTable-container">
+                                    <table id="datatablesSimple" class="dataTable-table">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <a href="#">ID</a>
+                                                </th>
+                                                <th>
+                                                    <a href="#">HỌ TÊN</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">NGÀY SINH</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">GIỚI TÍNH</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">CMND/CCCD</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">SỐ ĐIỆN THOẠI</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">EMAIL</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">ĐỊA CHỈ</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">NGÀY LẬP THẺ</a>
+                                                </th>
+                                                <th data-sortable="">
+                                                    <a href="#">NGÀY HẾT HẠN</a>
+                                                </th>
+                                                <th data-sortable="" style="width: 15%;">
+                                                    <a href="#">TÙY CHỌN</a>
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td>SV00000001</td>
+                                                <td>Tong Bao Hiep</td>
+                                                <td>27/03/2022</td>
+                                                <td>Nam</td>
+                                                <td>123456789</td>
+                                                <td>090 868 9999</td>
+                                                <td>hiep@gmail.com</td>
+                                                <td>Quan Phu Nhuan</td>
+                                                <td>1/12/2022</td>
+                                                <td>1/06/2023</td>
+                                                <td>
+                                                    <button type="submit" class="btn btn-fix edit" value="SV00000001"
+                                                        data-bs-toggle="modal" data-bs-target="#edit">Sửa</button>
+                                                    <button type="submit" class="btn btn-del delete" value="SV00000001"
+                                                        data-bs-toggle="modal" data-bs-target="#delete">Xóa</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- <div class="dataTable-bottom">
+                                <div class="dataTable-info">Showing 1 to 10 of 10 entries</div>
+                                <nav class="dataTable-pagination">
+                                    <ul class="dataTable-pagination-list"></ul>
+                                </nav>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!----------Thêm độc giả-------------------->
+            <div class="modal fade" id="add" tabindex="-1" aria-labelledby="modal-form-signup" style="display: none;"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card p-3 p-lg-4">
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="text-center text-md-center mb-4 mt-md-0">
+                                    <h1 class="mb-0 h4">Thêm độc giả</h1>
+                                </div>
+                                <form action="./admin.html" method="post" class="mt-4">
+                                    <div class="form-group">
+                                        <div class="form-group mb-4">
+                                            <label for="hoten">Họ tên</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="hoten" name="hoten" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="ngaysinh">Ngày sinh</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="ngaysinh" name="ngaysinh" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="gioitinh">Giới tính</label>
+                                            <select class="form-select mb-0" id="gender"
+                                                aria-label="Gender select example" name="gioitinh">
+                                                <option value="-1">Nam</option>
+                                                <option value="0">Nữ</option>
+                                                <option value="1">Khác</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="email">CMND/CCCD</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="cmnd" name="cmnd"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="sdt">Số điện thoại</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="sdt" name="sdt"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="email">Email</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="email" name="email"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="diachi">Địa chỉ</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="diachi" name="diachi"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="diachi">Ngày lập thẻ</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="ngaybd" name="ngaybd"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="diachi">Ngày hết hạn</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="ngaykt" name="ngaykt"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-add">Lưu</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-------------Sửa--------------->
+            <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="modal-form-signup" style="display: none;"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card p-3 p-lg-4">
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="text-center text-md-center mb-4 mt-md-0">
+                                    <h1 class="mb-0 h4">Thông tin độc giả</h1>
+                                </div>
+                                <form action="./admin.html" method="post" class="mt-4">
+                                    <div class="form-group">
+                                        <div class="form-group mb-4">
+                                            <label for="iddocgia">ID</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="iddocgia" name="iddocgia" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="hoten">Họ tên</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="hoten" name="hoten" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="ngaysinh">Ngày sinh</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="ngaysinh" name="ngaysinh" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="gioitinh">Giới tính</label>
+                                            <select class="form-select mb-0" id="gender"
+                                                aria-label="Gender select example" name="gioitinh">
+                                                <option value="-1">Nam</option>
+                                                <option value="0">Nữ</option>
+                                                <option value="1">Khác</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="email">CMND/CCCD</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="cmnd" name="cmnd"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="sdt">Số điện thoại</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="sdt" name="sdt"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="email">Email</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="email" name="email"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label for="diachi">Địa chỉ</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="diachi" name="diachi"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-add">Lưu</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!------------Xóa------------>
+            <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="modal-form-signup" style="display: none;"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card p-3 p-lg-4">
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                                <div class="text-center text-md-center mb-4 mt-md-0">
+                                    <h1 class="mb-0 h4">Xóa độc giả</h1>
+                                </div>
+                                <form action="./admin.html" method="post" class="mt-4">
+                                    <div class="form-group mb-4">
+                                        <label for="iddocgia">ID</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="iddocgia-delete" name="id"
+                                                autofocus="" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-del">Xóa</button>
+                                        <button class="btn" type="button" class="btn-close ms-auto btn-gray-200"
+                                            data-bs-dismiss="modal" aria-label="Close">Hủy</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; HPLLibrary</div>
+                        <div>
+                            <a href="./index.html">Trang chủ</a>
+                            &middot;
+                            <a href="#">Liên hệ</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/14e8760cb2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="./js/Form.js"></script>
+</body>
+
+</html>

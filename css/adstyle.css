@@ -3046,13 +3046,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #F7941D;
-  border-color: #F7941D;
+  background-color: #212529;
+  border-color: #212529;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #545AA6;
-  border-color: #545AA6;
+  background-color: #F7941D;
+  border-color: #F7941D;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -4075,7 +4075,7 @@ textarea.form-control-lg {
 .navbar-nav {
   display: flex;
   flex-direction: column;
-  padding-left: 0;
+  padding-left: 58%;
   margin-bottom: 0;
   list-style: none;
 }
@@ -4522,6 +4522,36 @@ textarea.form-control-lg {
 .navbar-dark .navbar-text a:focus {
   color: #fff;
 }
+
+button.btn.btn-add {
+  background-color: #F7941D;
+  border-radius: 6px;
+}
+button.btn.btn-add:hover {
+  background-color:#e18413;
+}
+
+button.btn.btn-fix{
+  width: 60px;
+  font-weight: 500;
+  color:white;
+  border-radius: 6px;
+  background-color: #545AA6;
+}
+button.btn.btn-fix:hover{
+  background-color: #423C7A;
+}
+button.btn.btn-del{
+  width: 60px;
+  font-weight: 500;
+  color:white;
+  border-radius: 6px;
+  background-color: #F7941D;
+}
+button.btn.btn-del:hover{
+  background-color: #e18413 ;
+}
+
 
 .card {
   position: relative;
@@ -7474,6 +7504,7 @@ textarea.form-control-lg {
 .px-4 {
   padding-right: 1.5rem !important;
   padding-left: 1.5rem !important;
+  padding-top:1.5rem !important;
 }
 
 .px-5 {
@@ -11420,8 +11451,9 @@ body {
 
 .sb-topnav {
   padding-left: 0;
-  height: 56px;
+  height: 70px;
   z-index: 1039;
+
 }
 .sb-topnav .navbar-brand {
   width: 225px;
@@ -11632,6 +11664,7 @@ body {
   vertical-align: bottom;
   text-align: left;
   border-bottom: none;
+  background-color: whitesmoke;
 }
 
 .dataTable-table > tfoot > tr > th {

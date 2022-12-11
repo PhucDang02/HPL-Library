@@ -1,8 +1,7 @@
 .container {
   width: 100%;
-  padding-left: 4%;
-  padding-right: 4%;
-  margin-top: 30px;
+  padding-left: 1%;
+  padding-right: 1%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,17 +11,15 @@
     /**background-color: rgb(151, 219, 130);**/
     text-align: center;
     cursor: default;
+    margin-bottom: 10px;
 }
 .tittle1 a{
     text-decoration: none;
-    font-size: 30px;
-    font-weight: 700;
-    color: rgb(34, 34, 34);
+    font-size: 27px;
+    font-weight: 550;
+    color: #F7941D;
 }
-.tittle1 a:hover{
-  color: rgb(151, 219, 130);
-  font-size: 32px;
-}
+
 /**San pham**/
 .product1 {
   width: 100%;
@@ -32,13 +29,14 @@
   margin-bottom: 40px;
 }
 .col1 {
-  width: 22%;
-  height: 300px;
+  width: 19%;
+  height: 310px;
   border: 1.5px solid rgb(212, 211, 211);
+  border-radius: 5px;
 }
 .col1 img {
   width: 100%;
-  height: 190px;
+  height: 210px;
 }
 .col1:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -51,24 +49,25 @@
   position: absolute;
   z-index: 1;
 }
-.main_img_top p{
+.round p{
   color: white;
   position: absolute;
   z-index: 2;
-  margin-top: 8px;
-  margin-left:20px;
   font-size: 15px;
+  margin-left: 14px;
+  font-weight: 600;
 }
 .round {
   width: 70px;
   height: 30px;
   background-color: red;
   position: absolute;
+  padding: 5px;
   /**border-radius: 0 5px 5px 0;**/
 }
 
 .name {
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 9px;
   padding-top: 5px;
 }
@@ -78,27 +77,31 @@
   font-weight: 600;
 }
 .name a:hover{
-  color: rgb(151, 219, 130);
+  color: #F7941D;
   cursor: pointer;
 }
-.Loca {
+.author {
   font-size: 14px;
   color: gray;
   padding-left: 9px;
   padding-top: 3px;
 }
-.price_buy {
+.number {
   display: flex;
-  margin-top: 30px;
+  margin-top: 10px;
   justify-content: space-between;
   padding-left: 4%;
   padding-right: 4.5%;
 }
-.price {
-  color: indianred;
+.numberofbook {
+  color: gray;
+  font-size: 14px;
+}
+.heart i {
+  color: gray;
   font-size: 17px;
 }
-.buy {
-  color: gray;
+.heart i:hover {
+  color: red;
 }
 
